@@ -1,0 +1,26 @@
+/* h1{
+    color:blue;
+    background-color: brown;
+}
+body{
+    background-color: rgb(208, 253, 255);
+}
+button{
+    background-color: rgb(0, 89, 254);
+    color:rgb(255, 255, 255);
+} */
+/* #box{
+    height: 300px;
+    width: 100px;
+    background-color: dodgerblue;
+    color:rgb(255, 255, 255);
+    border:1px solid black;
+} */
+
+.bonshika{
+    background-color: burlywood;
+    color: crimson;
+}
+.newclass{
+    background-color: green;
+}
