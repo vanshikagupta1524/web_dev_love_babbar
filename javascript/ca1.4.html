@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body onload="checkCookies()">
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="background-color: aquamarine;width:100;height:50;padding:40"
+  >
+        
+    mouse over me</div>
+    <!-- ==================== -->
+    <!-- <h2>javascript validations</h2>
+    <p id="demo"></p> -->
+    <!-- <h2>javascript html events</h2>
+    enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <p>when you leave the input field,a function is triggered which transforms
+        the input text to upper case.
+    </p> -->
+
+    <script>
+        function mOver(obj){
+            obj.innerHTML="thank u";
+        }
+        function mOut(obj){
+            obj.innerHTML="Mouse over me";
+        }
+        // ===================
+        // function upperCase(){
+        //     const x=document.getElementById("fname");
+        //     x.value=x.value.toUpperCase();
+        // }
+// ============================================
+        // function checkCookies(){
+        // var text="";
+        // if(navigator.cookieEnabled==true){
+        //     text="cookies are enabled";
+        
+        // }
+        // else{
+        //     text="cookies are not enabled";
+        // }
+        // document.getElementById("demo").innerHTML=text;
+        // }
+
+            </script>
+    
+</body>
+</html>
