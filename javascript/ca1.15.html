@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var valid;
+        function starts(click){
+            var controls=document.getElementById(click);
+            var seconds=controls.value;
+            seconds=seconds-1;
+            if(seconds==0){
+                controls.value="Done";
+                return; 
+            }
+            else{
+                controls.value=seconds;
+            }
+      valid=setTimeout(function(){starts('txtbox');},1000);
+
+        }
+        function stops(){
+            clearInterval(valid);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="10" id="txtbox">
+     <input type="button" value="start" onclick="starts('txtbox')">
+     <input type="button" value="stop" onclick="stops()">
+</body>
+</html>
