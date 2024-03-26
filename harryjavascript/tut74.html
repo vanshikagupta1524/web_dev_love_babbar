@@ -1,0 +1,102 @@
+<!-- Event,Event bubbling,setinterval and setimeout
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            hey change my colour
+        </div>
+    </div>
+    <button id="btn">change laao</button>
+    <script>
+let button=document.getElementById("btn");
+
+// button.addEventListener("mousemove",function(){
+// alert(" i was clicked");
+// document.querySelector(".box").innerHTML="<b>heya</b> i am here";
+// });
+button.addEventListener("contextmenu",function(){
+alert(" Don't hack us by right click");
+});
+button.addEventListener("keydown",function(e){
+console.log(e);
+});
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- Event bubbling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            background-color: aliceblue;
+            border: 2px solid black;
+            margin:34px;
+            padding:34px;
+        }
+        .childcontainer{
+            background-color: rgb(55, 255, 135);
+            border: 2px solid black;
+            margin:34px;
+            padding:34px;
+        }
+        .container{
+            background-color: rgb(228, 241, 32);
+            border: 2px solid black;
+            margin:34px;
+            padding:34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                I am child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("contextmenu",function(e){
+            e.stopPropagation();
+            alert("child was clicked");
+        });
+        document.querySelector(".childcontainer").addEventListener("contextmenu",function(e){
+            e.stopPropagation();
+            alert("childcontainer was clicked");
+        });
+        document.querySelector(".container").addEventListener("contextmenu",function(e){
+            alert("container was clicked");
+        });
+function getRandomColor(){
+    let val1=Math.ceil(0+Math.random()*255);
+    let val2=Math.ceil(0+Math.random()*255);
+    let val3=Math.ceil(0+Math.random()*255);
+    return `rgb(${val1}, ${val2}, ${val3})`
+}
+        // let a=setInterval(()=>{
+        //     document.querySelector(".childcontainer").style.background=getRandomColor();
+        // },1000);
+        // console.log(a);
+        // clearInterval(a);
+// setimeout do only one time
+        let b=setTimeout(()=>{
+            document.querySelector(".childcontainer").style.background=getRandomColor();
+        },2000);
+        console.log(b);
+    </script>
+</body>
+</html>
