@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback and promises</title>
+</head>
+
+<body>
+    <script>
+        console.log("harry");
+        console.log("rohan");
+        // setTimeout(()=>{
+        //     console.log("inside settime");
+        // },1000);
+        const fn=() => {
+          console.log("Nothing");
+        }
+        
+        const callback = (arg,fn) => {
+            console.log(arg);
+            fn();
+        }
+
+        const loadScript = (src, callback) => {
+            let sc = document.createElement("Script");
+            sc.src = src;
+            sc.onload = callback("harry",fn);
+            document.head.append(sc);
+        }
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback);
+        console.log("end");
+        // write Prism in console
+    </script>
+</body>
+
+</html>
