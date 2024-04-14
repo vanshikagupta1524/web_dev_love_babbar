@@ -1,0 +1,1 @@
+position  text in all corner && centre of an image

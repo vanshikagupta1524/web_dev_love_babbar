@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallex website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: red;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 10px;
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            z-index: -1;
+        }
+
+
+        .back {
+            transform: translateZ(-40px) scale(6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .for {
+            position: absolute;
+            transform: translateZ(-20px) scale(3);
+            bottom: -20px;
+            height: 600px;
+            object-fit: contain;
+        }
+
+        .title {
+            position: absolute;
+            top: 5rem;
+            left: 50%;
+            /* font-family: 'Poppins',sans-serif; */
+            transform: translateX(-50%);
+            font-size: 8rem;
+            letter-spacing: 4px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        }
+        section{
+            background-color: rgb(45,45,45);
+            color:white;
+            padding :5rem 0;
+        }
+        .bg{
+            position:relative;
+            width:100%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height:500px;
+        }
+        .bg1{
+        background-image: url("sport-1.jpg");
+        }
+        .bg2{
+        background-image: url("sport-2.jpg");
+        }
+        .bg3{
+        background-image: url("sport-3.jpg");
+        }
+        .secHeading{
+            font-size:5rem;
+            padding: 0 10rem;
+        }.text{
+            font-size:1.5rem;
+            padding:0 10rem;
+            margin:5rem 0;
+        }
+        .desc{
+            position:absolute;
+            background-color: white;
+            padding:0.5rem 2.5rem;
+            top:50%;
+            left:50%;
+            color:black;
+            font-size: 3.5rem;
+            font-weight: 600;
+            transform: translateX(-50%) ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">ADVENTURE</h1>
+            <img src="background.png" alt="background" class="back">
+            <img src="foreground.png" class="for">
+
+        </div>
+        <section>
+            <h2 class="secHeading">ADVENTURE TIME</h2>
+            <P class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore, nisi magnam asperiores quod
+                recusandae omnis modi in accusamus blanditiis? Saepe ab magni odit officia temporibus voluptates
+                consequuntur, soluta sed voluptate laboriosam nostrum ex fuga optio velit magnam dicta molestias,
+                praesentium voluptatem repellendus quisquam beatae, illum pariatur non! Dolorem, maxime!<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius, ut esse id eos libero laborum
+                voluptatibus vero non unde. Sapiente atque blanditiis <br>illo rerum earum iusto, porro autem praesentium
+                quam pariatur dolorum ullam ex vero at mollitia excepturi unde. Laboriosam maiores quae accusantium,
+                voluptatem est eligendi dolorum? Sit, consequatur?</P>
+                <div class="bg bg1">
+                    <h2 class="desc">BIKING</h2>
+                </div>
+                <P class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore, nisi magnam asperiores quod
+                    recusandae omnis modi in accusamus blanditiis? Saepe ab magni odit officia temporibus voluptates
+                    consequuntur, soluta sed voluptate laboriosam nostrum ex fuga optio velit magnam dicta molestias,
+                    praesentium voluptatem repellendus quisquam beatae, illum pariatur non! Dolorem, maxime!<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius, ut esse id eos libero laborum
+                    voluptatibus vero non unde. Sapiente atque blanditiis <br>illo rerum earum iusto, porro autem praesentium
+                    quam pariatur dolorum ullam ex vero at mollitia excepturi unde. Laboriosam maiores quae accusantium,
+                    voluptatem est eligendi dolorum? Sit, consequatur?</P>
+                    <div class="bg bg2">
+                        <h2 class="desc">PARA GLIDING</h2>
+                    </div>
+                    <P class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore, nisi magnam asperiores quod
+                        recusandae omnis modi in accusamus blanditiis? Saepe ab magni odit officia temporibus voluptates
+                        consequuntur, soluta sed voluptate laboriosam nostrum ex fuga optio velit magnam dicta molestias,
+                        praesentium voluptatem repellendus quisquam beatae, illum pariatur non! Dolorem, maxime!<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius, ut esse id eos libero laborum
+                        voluptatibus vero non unde. Sapiente atque blanditiis <br>illo rerum earum iusto, porro autem praesentium
+                        quam pariatur dolorum ullam ex vero at mollitia excepturi unde. Laboriosam maiores quae accusantium,
+                        voluptatem est eligendi dolorum? Sit, consequatur?</P>
+                    <div class="bg bg3">
+                        <h2 class="desc">SURFING</h2>
+                    </div>
+                    <P class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore, nisi magnam asperiores quod
+                        recusandae omnis modi in accusamus blanditiis? Saepe ab magni odit officia temporibus voluptates
+                        consequuntur, soluta sed voluptate laboriosam nostrum ex fuga optio velit magnam dicta molestias,
+                        praesentium voluptatem repellendus quisquam beatae, illum pariatur non! Dolorem, maxime!<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eius, ut esse id eos libero laborum
+                        voluptatibus vero non unde. Sapiente atque blanditiis <br>illo rerum earum iusto, porro autem praesentium
+                        quam pariatur dolorum ullam ex vero at mollitia excepturi unde. Laboriosam maiores quae accusantium,
+                        voluptatem est eligendi dolorum? Sit, consequatur?</P>
+        </section>
+    </div>
+</body>
+
+</html>

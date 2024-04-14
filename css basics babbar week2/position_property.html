@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p{
+            position:static;
+        } */
+        div{
+            display:inline-block;
+            width:150px;
+            height:150px;
+            background-color: aqua;
+            border:1px solid black;
+        }
+        /* .box{
+            position:relative;
+            top:150px;
+        } */
+        /* #box1{
+            position:relative;
+            top:50px;
+            left:80px;
+        } */
+        /* #box2{
+            position: absolute;
+            top:500px;
+        } */
+         #box2{
+            position: sticky;
+            top:50px;
+        }
+        /* #box4{
+            position: fixed;
+        } */
+        .wrapper{
+            height:2000px;
+            background-color: yellowgreen;
+            width:100vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>
+        hello buddy
+    </p> -->
+  
+    <div class="wrapper">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>
