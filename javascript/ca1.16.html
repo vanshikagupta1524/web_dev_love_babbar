@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript image slideshow</title>
+    <script>
+        var inter;
+        function start() {
+            inter = setInterval(setImage, 500);
+        }
+    
+        function stop() {
+            clearInterval(inter);
+        }
+    
+        function setImage() {
+            var imgsrc = document.getElementById("image").getAttribute("src");
+            var currimg = parseInt(imgsrc.substring(imgsrc.lastIndexOf("/") + 4, imgsrc.lastIndexOf("/") + 5));
+            if (currimg === 6) {
+                currimg = 0;
+            }
+            document.getElementById("image").setAttribute("src", "tree" + (currimg + 1) + ".jpg");
+        }
+    </script>
+    
+</head>
+<body>
+   
+    <img id="image" src="tree.jpg" style="width:500px;height:250px;">
+    <input type="button" value="start slideshow" onclick="start()">
+    <input type="button" value="stop slideshow" onclick="stop()">
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        #slideshow {
+            width: 500px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img id="slideshow" src="tree1.jpg">
+    <br>
+    <button onclick="startSlideshow()">Start Slideshow</button>
+    <button onclick="stopSlideshow()">Stop Slideshow</button>
+
+    <script>
+        var images = ["tree1.jpg", "tree2.jpg", "tree3.jpg", "tree4.jpg", "tree5.jpg", "tree6.jpg"];
+        var currentIndex = 0;
+        var intervalId;
+
+        function startSlideshow() {
+            intervalId = setInterval(changeImage, 1000);
+        }
+
+        function stopSlideshow() {
+            clearInterval(intervalId);
+        }
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

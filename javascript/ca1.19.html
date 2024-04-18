@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw error</title>
+    <script>
+        function divide(){
+            var num=Number(prompt("enter numerator"));
+            var denom=Number(prompt("enter denominator"));
+            try{
+                if(denom==0){
+                    throw{
+                       error:"divide by zero err",
+                       message:"deno cannot be zero"
+                    };
+                }
+                else{
+                   alert("result="+(num/denom)); 
+                }
+            }
+            catch(e){
+               document.write(e.error);
+               document.write(e.message); 
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="submit" onclick="divide()">
+</body>
+</html>

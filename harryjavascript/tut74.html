@@ -71,11 +71,11 @@ console.log(e);
 
     <script>
         document.querySelector(".child").addEventListener("contextmenu",function(e){
-            e.stopPropagation();
+            // e.stopPropagation();
             alert("child was clicked");
         });
         document.querySelector(".childcontainer").addEventListener("contextmenu",function(e){
-            e.stopPropagation();
+            // e.stopPropagation();
             alert("childcontainer was clicked");
         });
         document.querySelector(".container").addEventListener("contextmenu",function(e){
@@ -87,16 +87,16 @@ function getRandomColor(){
     let val3=Math.ceil(0+Math.random()*255);
     return `rgb(${val1}, ${val2}, ${val3})`
 }
-        // let a=setInterval(()=>{
-        //     document.querySelector(".childcontainer").style.background=getRandomColor();
-        // },1000);
+        let a=setInterval(()=>{
+            document.querySelector(".childcontainer").style.background=getRandomColor();
+        },1000);
         // console.log(a);
         // clearInterval(a);
 // setimeout do only one time
-        let b=setTimeout(()=>{
-            document.querySelector(".childcontainer").style.background=getRandomColor();
-        },2000);
-        console.log(b);
+        // let b=setTimeout(()=>{
+        //     document.querySelector(".childcontainer").style.background=getRandomColor();
+        // },1000);
+        // console.log(b);
     </script>
 </body>
 </html>
